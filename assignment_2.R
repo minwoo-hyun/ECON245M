@@ -39,8 +39,9 @@ highest_avg_square_ft <- summary_stats_top_neighborhoods %>%
   pull(avg_square_feet)
 
 # 2(f)
-second_avg_square_ft <- summary_stats_top_neighborhoods %>% 
-  select(avg_square_feet) %>% 
+second_avg_price<- summary_stats_top_neighborhoods %>% 
+  arrange(desc(price))
+  select(price) %>% 
   slice(2) %>% 
-  pull(avg_square_feet)
+  pull(price)
 
